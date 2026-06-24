@@ -6,7 +6,7 @@ function Button({ children, variant = "primary", className = "", ...props }) {
   const variants = {
     primary: "bg-sky-600 text-white hover:bg-sky-700",
     secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
-    ghost: "bg-transparent text-slate-700 hover:bg-slate-100",
+    ghost: "bg-red-200 text-slate-700 hover:bg-red-300",
   };
 
   return (

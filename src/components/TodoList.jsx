@@ -99,7 +99,7 @@ function TodoList() {
           <Droppable droppableId="todo-list">
             {(provided) => (
               <div
-                className="space-y-3"
+                className="flex flex-col gap-3"
                 ref={provided.innerRef}
                 {...provided.droppableProps}
               >
@@ -110,8 +110,9 @@ function TodoList() {
                         ref={dragProvided.innerRef}
                         {...dragProvided.draggableProps}
                         {...dragProvided.dragHandleProps}
-                        className={`rounded-3xl transition ${
-                          snapshot.isDragging ? "ring-2 ring-sky-400 bg-slate-50" : ""
+                        style={dragProvided.draggableProps.style}
+                        className={`rounded-3xl ${
+                          snapshot.isDragging ? "z-10 ring-2 ring-sky-400 bg-slate-50 shadow-lg" : ""
                         }`}
                       >
                         <TodoItem
